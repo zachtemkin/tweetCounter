@@ -1,0 +1,24 @@
+{
+  "name": "tweetcounter",
+  "version": "1.0.0",
+  "description": "an endpoint to get the count of tweets that match a provided query string",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachtemkin/tweetCounter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachtemkin/tweetCounter/issues"
+  },
+  "homepage": "https://github.com/zachtemkin/tweetCounter#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "needle": "^3.1.0"
+  }
+}
