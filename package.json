@@ -1,7 +1,7 @@
 {
   "name": "tweetcounter",
   "version": "1.0.0",
-  "description": "an endpoint to get the count of tweets that match a provided query string",
+  "description": "an endpoint to get the count of tweets from the last 60 seconds that match a provided query string",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
