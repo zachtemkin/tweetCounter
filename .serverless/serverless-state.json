@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tweet-counter/dev/1661996790295-2022-09-01T01:46:30.295Z/tweet-counter.zip"
+                "S3Key": "serverless/tweet-counter/dev/1661998621013-2022-09-01T02:17:01.013Z/tweet-counter.zip"
               },
               "Handler": "app/app.handler",
               "Runtime": "nodejs16.x",
@@ -192,14 +192,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersionXVFCIANFGX8Mgh6Rwu05C22DyoowvBDzsvKHjRu8Q": {
+          "AppLambdaVersion3J48XDDSfmNLsAHyZ8mo02ELeMYRArOTasIb3gRVoY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "s+z15lHbWerklBVcDA5XHdDjIjQ36UzH8i06w94ehio="
+              "CodeSha256": "TrFe+a+E+wAd/wdMTgUuf1fxrV/t5WteLsqXW8NYZhs="
             }
           },
           "ApiGatewayRestApi": {
@@ -417,7 +417,7 @@
               "AppLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1661996785599": {
+          "ApiGatewayDeployment1661998618115": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -482,7 +482,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionXVFCIANFGX8Mgh6Rwu05C22DyoowvBDzsvKHjRu8Q"
+              "Ref": "AppLambdaVersion3J48XDDSfmNLsAHyZ8mo02ELeMYRArOTasIb3gRVoY"
             },
             "Export": {
               "Name": "sls-tweet-counter-dev-AppLambdaFunctionQualifiedArn"
@@ -660,7 +660,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersionXVFCIANFGX8Mgh6Rwu05C22DyoowvBDzsvKHjRu8Q"
+        "versionLogicalId": "AppLambdaVersion3J48XDDSfmNLsAHyZ8mo02ELeMYRArOTasIb3gRVoY"
       }
     },
     "configValidationMode": "warn",
@@ -679,7 +679,7 @@
     "artifact": "/Users/zach/dev/tweetCounter/.serverless/tweet-counter.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/tweet-counter/dev/1661996790295-2022-09-01T01:46:30.295Z",
+    "artifactDirectoryName": "serverless/tweet-counter/dev/1661998621013-2022-09-01T02:17:01.013Z",
     "artifact": "tweet-counter.zip"
   }
 }

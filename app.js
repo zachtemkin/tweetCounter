@@ -59,7 +59,7 @@ const analyze = async (twitterData) => {
   return twitterData.meta;
 };
 
-app.get("/api/tweetCount/", getTweetCount);
+app.get("/", getTweetCount);
 
 // app.listen(process.env.PORT || 3001, () => {
 //   console.log(`Listening on port ${process.env.PORT}`);
