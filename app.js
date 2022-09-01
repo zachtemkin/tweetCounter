@@ -7,7 +7,6 @@ const serverless = require("serverless-http");
 const app = express();
 
 app.use(cors()).options("*", cors());
-app.use();
 
 dotenv.config();
 const BearerToken = process.env.BEARER_TOKEN;
