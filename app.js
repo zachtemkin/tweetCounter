@@ -1,8 +1,11 @@
+const cors = require("cors");
 const express = require("express");
 const dotenv = require("dotenv");
 const needle = require("needle");
 
 const app = express();
+
+app.use(cors()).options("*", cors());
 
 dotenv.config();
 const BearerToken = process.env.BEARER_TOKEN;
