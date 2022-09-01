@@ -2,7 +2,6 @@ const cors = require("cors");
 const express = require("express");
 const dotenv = require("dotenv");
 const needle = require("needle");
-const serverless = require("serverless-http");
 
 const app = express();
 
@@ -61,8 +60,6 @@ const analyze = async (twitterData) => {
 
 app.get("/", getTweetCount);
 
-// app.listen(process.env.PORT || 3001, () => {
-//   console.log(`Listening on port ${process.env.PORT}`);
-// });
-
-module.exports.handler = serverless(app);
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
+});
