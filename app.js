@@ -10,24 +10,24 @@ app.use(cors()).options("*", cors());
 dotenv.config();
 const BearerToken = process.env.BEARER_TOKEN;
 
-const cache = (duration) => {
-  return (req, res, next) => {
-    let key = "__express__" + req.originalUrl || req.url;
-    let cachedBody = mcache.get(key);
+// const cache = (duration) => {
+//   return (req, res, next) => {
+//     let key = "__express__" + req.originalUrl || req.url;
+//     let cachedBody = mcache.get(key);
 
-    if (cachedBody) {
-      res.send(cachedBody);
-      return;
-    } else {
-      res.sendResponse = res.send;
-      res.send = (body) => {
-        mcache.put(key, body, duration * 1000);
-        res.sendResponse(body);
-      };
-      next();
-    }
-  };
-};
+//     if (cachedBody) {
+//       res.send(cachedBody);
+//       return;
+//     } else {
+//       res.sendResponse = res.send;
+//       res.send = (body) => {
+//         mcache.put(key, body, duration * 1000);
+//         res.sendResponse(body);
+//       };
+//       next();
+//     }
+//   };
+// };
 
 const endpointUrl = "https://api.twitter.com/2/tweets/counts/recent";
 
@@ -88,7 +88,7 @@ setInterval(() => {
   });
 }, 7000);
 
-const getTestCount = async (req, res) => {
+const getCount = async (req, res) => {
   const queryVal = req.query.queryString;
 
   if (!counters.find((e) => e.query === queryVal)) {
@@ -109,7 +109,7 @@ const getTestCount = async (req, res) => {
   res.send(currentCounter.count);
 };
 
-app.get("/", getTestCount);
+app.get("/", getCount);
 
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Listening on port ${process.env.PORT}`);
